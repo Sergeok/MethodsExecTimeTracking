@@ -1,6 +1,6 @@
 package ok.serge.store;
 
-import ok.serge.timetrack.TrackTime;
+import ok.serge.annotation.TrackTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

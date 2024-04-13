@@ -13,7 +13,7 @@ import java.util.Map;
 @Slf4j
 public class ExceptionHandlerAspect {
 
-    @Around("execution(@ok.serge.timetrack.ProblemPart public java.util.Map* *(..))")
+    @Around("execution(@ok.serge.annotation.ProblemPart public java.util.Map* *(..))")
     public Object asyncRunner(ProceedingJoinPoint pjp) throws Throwable {
         try {
             return pjp.proceed();

@@ -15,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 @Slf4j
 public class LoggingAspect {
 
-    @Around("@annotation(ok.serge.timetrack.TrackTime)")
+    @Around("@annotation(ok.serge.annotation.TrackTime)")
     public Object asyncRunner(ProceedingJoinPoint pjp) throws Throwable {
         long startTime = System.currentTimeMillis();
 
@@ -29,7 +29,7 @@ public class LoggingAspect {
         return result;
     }
 
-    @Around("execution(@ok.serge.timetrack.TrackAsyncTime public java.util.concurrent.CompletableFuture* *(..))")
+    @Around("execution(@ok.serge.annotation.TrackAsyncTime public java.util.concurrent.CompletableFuture* *(..))")
     public Object around(ProceedingJoinPoint pjp) throws Throwable {
         long startTime = System.currentTimeMillis();
 

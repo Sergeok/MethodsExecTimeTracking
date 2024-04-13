@@ -28,7 +28,7 @@ public class PersistAspect {
         this.savingService = savingService;
     }
 
-    @Around("@annotation(ok.serge.timetrack.TrackTime))")
+    @Around("@annotation(ok.serge.annotation.TrackTime))")
     public Object aroundSyncMethods(ProceedingJoinPoint pjp) throws Throwable {
         String methodName = pjp.getSignature().getName();
         LocalDateTime startTime = LocalDateTime.now();
@@ -39,7 +39,7 @@ public class PersistAspect {
         return result;
     }
 
-    @Around("@annotation(ok.serge.timetrack.TrackAsyncTime))")
+    @Around("@annotation(ok.serge.annotation.TrackAsyncTime))")
     public Object aroundAsyncMethods(ProceedingJoinPoint pjp) throws Throwable {
         String methodName = pjp.getSignature().getName();
         LocalDateTime startTime = LocalDateTime.now();

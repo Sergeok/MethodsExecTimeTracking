@@ -1,6 +1,6 @@
 package ok.serge.service;
 
-import ok.serge.timetrack.ProblemPart;
+import ok.serge.annotation.ProblemPart;
 import ok.serge.utils.MethodExecType;
 import ok.serge.model.DurationData;
 import ok.serge.model.view.FuncDataView;
